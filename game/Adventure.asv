@@ -1,0 +1,16 @@
+testMap = [0, 0, 0, 0, 0;0, 1, 1, 1, 0;0, 1, 1, 1, 0; 0, 1, 1, 1, 0; 0, 0, 0, 0, 0];
+start = [3,4];
+location = testMap(start(1,1),start(1,2));
+
+disp('you may go north, east or west')
+user = input(' ', 's');
+userInput = strsplit(user);
+userObjective = char(userInput(1,2));
+userCommand = char(userInput(1,1));
+
+switch userCommand
+    case {'go'}
+        AdvanceRoom(userObjective);
+    case {'pick'}
+        disp('you picked it up')
+end
