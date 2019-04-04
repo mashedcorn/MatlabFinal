@@ -1,34 +1,23 @@
-C=1
-Damage=0
-while C==1
-    clear
+function [damage] = fight()
+c = 1;
+    disp('swing your phone')
+    damage=0;
+while c == 1
     m = mobiledev;
-    m.AccelerationSensorEnabled = 1
-    m.Logging = 1
+    m.AccelerationSensorEnabled = 1;
+    m.Logging = 1;
     [a,t] = accellog(m);
-    pause(5);
-    disp(m);
-    plot(t,a)
-    disp(a)
-    Damage=int8(sqrt(a(1,1)^2+a(1,2)^2+a(1,3)^2 ))
-%     if a(1,1)<1 & a(1,1)>-1 
-%         Damage=0
-%         disp(Damage)
-%     elseif a(1,1)<5 & a(1,1)>1 || a(1,1)>-5 & a(1,1)<-1 
-%         Damage=5
-%         disp(Damage)
-%     elseif a(1,1)<10 & a(1,1)>5 || a(1,1)>-10 & a(1,1)<-5
-%         Damage=10
-%         disp(Damage)
-%     elseif a(1,1)<15 & a(1,1)>10 || a(1,1)>-15 & a(1,1)<-10
-%         Damage=15
-%         disp(Damage)
-%     elseif a(1,1)<20 & a(1,1)>15 || a(1,1)>-20 & a(1,1)<-17
-%         Damage=20
-%         disp(Damage)
-%     else 
-%         Damage=30
-%         didp(Damage)
-%     end
-     C=0
+    disp('3')
+    pause(1);
+    disp('2')
+    pause(1);
+    disp('1');
+    pause(1);
+    m.Logging = 0;
+    accel = sqrt(a.^2+a.^2+a.^2 )-9.8;
+    damage = int8(max(accel));
+    disp(damage);
+    c = 0;
 end
+
+
