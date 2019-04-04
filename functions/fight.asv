@@ -10,7 +10,7 @@ while C==1
     disp(m);
     plot(t,a)
     disp(a)
-    Damage=int8(sqrt(a(1,1)^2+a(1,2)^2+a(1,3)^2 ))
+    Damage=sqrt(a(1,1)^2+a(1,2)^2+a(1,3)^2 )
 %     if a(1,1)<1 & a(1,1)>-1 
 %         Damage=0
 %         disp(Damage)
