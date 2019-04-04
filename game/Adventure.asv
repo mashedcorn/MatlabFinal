@@ -1,5 +1,5 @@
-testMap = [0, 0, 0, 0, 0;0, 0, 255, 0, 0;0, 0, 255, 0, 0; 0, 0, 255, 0, 0; 0, 0, 0, 0, 0];
-testMap(:,:,2) = [0, 0, 0, 0, 0;0, 0, 2, 0, 0;0, 0, 1, 0, 0; 0, 0, 1, 0, 0; 0, 0, 0, 0, 0];
+testMap = [0, 0, 0, 0, 0;0, 255, 255, 255, 0;0, 255, 255, 255, 0; 0, 255, 255, 255, 0; 0, 0, 0, 0, 0];
+testMap(:,:,2) = testMap(:,:,1);
 
 
 %5x5 map of 9 rooms surrounded by walls
@@ -12,9 +12,8 @@ coords = [4,3];
 
 
 
-game = 1;
 
-while game ==1
+%while game ==1
 disp('you may go north, east or west')
 user = input(' ', 's');
 userInput = strsplit(user);
@@ -29,9 +28,7 @@ userCommand = char(userInput(1,1));
             coords = location(coords,userObjective,map);
         case {'pick'}
             disp('you picked it up')
-        case {'end'}
-            game = 0;
         otherwise
             disp ('your command was not recognised')
     end
-end
+%end
