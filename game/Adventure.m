@@ -1,4 +1,4 @@
-testMap = [0, 0, 0, 0, 0;0, 0, 255, 0, 0;0, 0, 255, 0, 0; 0, 0, 255, 0, 0; 0, 0, 0, 0, 0];
+testMap = [0, 0, 0, 0, 0;0, 0, 2, 0, 0;0, 0, 1, 0, 0; 0, 0, 1, 0, 0; 0, 0, 0, 0, 0];
 testMap(:,:,2) = [0, 0, 0, 0, 0;0, 0, 2, 0, 0;0, 0, 1, 0, 0; 0, 0, 1, 0, 0; 0, 0, 0, 0, 0];
 
 
@@ -9,7 +9,9 @@ map = testMap;
 
 coords = [4,3];
 %starting coordinates
-
+playerHp = 100;
+disp('please make sure your phone is connected to the computer and set your sensor rate to 100 Hz');
+pause(5);
 
 
 game = 1;
@@ -26,7 +28,7 @@ userCommand = char(userInput(1,1));
 
     switch userCommand
         case {'go'}
-            coords = location(coords,userObjective,map);
+            coords = location(coords,userObjective,map,playerHp);
         case {'pick'}
             disp('you picked it up')
         case {'end'}
