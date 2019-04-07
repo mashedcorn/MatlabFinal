@@ -28,7 +28,7 @@ userCommand = char(userInput(1,1));
 
     switch userCommand
         case {'go'}
-            coords = location(coords,userObjective,map,playerHp);
+            [coords,playerHp,game,map] = location(coords,userObjective,map,playerHp);
         case {'pick'}
             disp('you picked it up')
         case {'end'}
