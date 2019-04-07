@@ -1,4 +1,4 @@
-function [coords,playerHp,game,map] = location(x,y,map,playerHp)
+function [coords, playerHp, ] = location(x,y,map,playerHp)
     coords = x;
     switch y
         case {'north', 'forward'}
@@ -25,7 +25,7 @@ function [coords,playerHp,game,map] = location(x,y,map,playerHp)
                 disp('you cannot go that way')
             else
                 coords(1,2) = x(1,2)+1;
-               [playerHp,game,map] = AdvanceRoom(coords, map,playerHp);
+                AdvanceRoom(coords, map,playerHp);
             end
             
         case {'west', 'left'}
@@ -34,7 +34,7 @@ function [coords,playerHp,game,map] = location(x,y,map,playerHp)
                  disp('you cannot go that way')
             else
                 coords(1,2) = x(1,2)-1;
-              [playerHp,game,map] =  AdvanceRoom(coords, map,playerHp);
+                AdvanceRoom(coords, map,playerHp);
             end
     end
 

@@ -39,9 +39,8 @@ while battle == 1
     if stats(1,1) <= 0 && playerHp>0
         disp('You are Vitorious!')
         battle = 0;
+        game =1;
         map(coords(1,1),coords(1,2)) = 1;
-        assignin('base', 'game', 1);
-        assignin(
     elseif playerHp <= 0
         battle = 0;
         game = 0;

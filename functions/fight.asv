@@ -9,7 +9,7 @@ function [damage] = fight()
     pause(1);
     disp('1');
     m.Logging = 1;
-    pause(1); 
+    pause(5); 
     [a] = accellog(m);
     m.Logging = 0;
     accel = sqrt(a(:,1).^2+a(:,2).^2+a(:,3).^2 )-9.8;

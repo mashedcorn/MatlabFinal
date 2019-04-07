@@ -1,7 +1,7 @@
 function roomDescrip(x,map)
     coords = x;
     locationData = map(coords(1,1),coords(1,2),2);
-    data = map(coords(1,1),coords(1,2),1)
+    data = map(coords(1,1),coords(1,2),1);
     if locationData == 1 
         disp('You are in a desolate hallway with smothstone walls beconing you fourth')
             if data  >1
