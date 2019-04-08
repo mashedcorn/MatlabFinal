@@ -1,13 +1,13 @@
 testMap = [0 0 0 0 0 0 0;0 0 0 2 0 6 0;0 0 1 1 0 1 0;0 0 0 3 0 1 0;0 7 0 1 0 1 0;0 1 4 1 1 4 0;0 0 0 1 0 0 0;0 0 0 5 0 0 0;0 0 0 6 0 0 0;0 0 0 0 0 0 0];
 testMap(:,:,2) = [0 0 0 0 0 0 0;0 0 0 6 0 1 0;0 0 4 7 0 1 0;0 0 0 9 0 1 0;0 3 0 1 0 1 0;0 1 2 1 1 1 0;0 0 0 5 0 0 0;0 0 0 8 0 0 0;0 0 0 10 0 0 0;0 0 0 0 0 0 0];
-%maps used 
+%maps used to play the game
 
 
 map = testMap;
 %load which map the lpayer will play
 
 coords = [3,3];
-%starting coordinates
+%starting coordinates and HP
 playerHp = 100;
 disp('please make sure your phone is connected to the computer and set your sensor rate to 100 Hz');
 pause(5);
@@ -15,7 +15,7 @@ roomDescrip(coords,map);
 pause(2);
 game = 1;
 
-while game ==1
+while game ==1%checks the map
 pause(1);
 checkPaths(coords,map);
 user = input(' ', 's');
