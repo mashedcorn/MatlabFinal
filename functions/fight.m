@@ -1,4 +1,4 @@
-function [damage] = fight()
+function [damage] = fight()%determines damage based on acceleration of your swing
 
     disp('Get ready to swing your phone!');
     m = mobiledev;
