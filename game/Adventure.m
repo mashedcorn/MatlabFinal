@@ -6,7 +6,7 @@ testMap(:,:,2) = [0 0 0 0 0 0 0;0 0 0 6 0 1 0;0 0 4 7 0 1 0;0 0 0 9 0 1 0;0 3 0 
 map = testMap;
 %load which map the lpayer will play
 
-coords = [3,2];
+coords = [3,3];
 %starting coordinates
 playerHp = 100;
 disp('please make sure your phone is connected to the computer and set your sensor rate to 100 Hz');
