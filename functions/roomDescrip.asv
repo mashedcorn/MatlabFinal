@@ -4,10 +4,10 @@ function roomDescrip(x,map)
     data = map(coords(1,1),coords(1,2),1);
     if locationData == 1 %determines what part of the map your in
     pause(2)
-        disp('You are in a desolate hallway with smothstone walls beconing you fourth')%give a description of the room
-            if data  >1%determinesif there is a monster present
-                pause(2)%pause it to let you read
-                disp('a misshapen shadow rushes down the hall, in the torch light it reveals its self to be a')%description of monster showing up
+        disp('You are in a desolate hallway with smothstone walls beconing you fourth')
+            if data  >1
+                pause(2)
+                disp('a misshapen shadow rushes down the hall, in the torch light it reveals its self to be a')
             end
     elseif locationData == 2
         pause(2)
@@ -72,5 +72,5 @@ function roomDescrip(x,map)
                 pause(2)
                 disp('you hear the clattering of an avalanch of coins, emerging from the treasure horde is a')
             end
-    end%end the elseifs
+    end
         
