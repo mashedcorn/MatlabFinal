@@ -30,17 +30,20 @@ else
     disp('wrong numbah');
     return
 end
+%checks which monster is in the room
 
 battle = 1;
     fprintf('%s!',name);
     disp(' '); 
     pause(2)
+%initiates battle
 while battle == 1
     if stats(1,1) <= 0 && playerHp>0
         disp('You are Vitorious!')
         battle = 0;
         game =1;
         map(coords(1,1),coords(1,2)) = 1;
+        % if enemy is dead end battle and remove enemy from room
     else
         pause(.5);
         fprintf('The %s attacks!',name)
@@ -51,6 +54,7 @@ while battle == 1
             battle = 0;
             game = 0;
             disp('You are dead.');
+            %end the game if player dies
             return
         end
          fprintf('-%d health    current health:%d',monAttk,playerHp);

@@ -18,20 +18,36 @@ game = 1;
 while game ==1
 pause(1);
 checkPaths(coords,map);
-user = input(' ', 's');
-userInput = strsplit(user);
+checkInput = 1;
 
+while checkInput == 1;
+    user = input(' ', 's');
+    userInput = strsplit(user);
 if length(userInput) == 2
-userObjective = char(userInput(1,2));
+    userCommand = char(userInput(1,1));
+    userObjective = char(userInput(1,2));
+    checkInput = 0;
+    
+    
+elseif length(userInput) == 1
+    userCommand = char(userInput(1,1));
+    checkInput = 0;
+else
+    disp('You must be confused, what does that mean?')
 end
-userCommand = char(userInput(1,1));
+%break up user input and check if there are too many words.
+end
+
+
 
     switch userCommand
         case {'go'}
             [coords,playerHp,game,map] = location(coords,userObjective,map,playerHp);
+            %move player if they use go
         case {'where am i','where am I'}
             roomDescrip(coords,map);
             checkPaths(coords,map);
+            %tell the player where they are 
         case {'end'}
             game = 0;
         otherwise
