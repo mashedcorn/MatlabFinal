@@ -1,4 +1,4 @@
-function [playerHp,game,map] = AdvanceRoom(coords,map,playerHp)
+function [playerHp,game,map] = AdvanceRoom(coords,map,playerHp)%determines if there is a monster in the room
 game = 1;
     locationData = map(coords(1,1),coords(1,2),1);
 

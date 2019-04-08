@@ -1,5 +1,5 @@
 function checkPaths(coords,map)
-disp('You may go:');
+disp('You may go:');%checks and displays the directions you can go
 pause(1);
 if map(coords(1,1)-1,coords(1,2),1) > 0
     disp('north')
