@@ -1,14 +1,9 @@
 function roomDescrip(x,map)
     coords = x;
     locationData = map(coords(1,1),coords(1,2),2);
-<<<<<<< HEAD
-    data = map(coords(1,1),coords(1,2),1)
-    if locationData == 1
-        pause(2)
-=======
     data = map(coords(1,1),coords(1,2),1);
     if locationData == 1 
->>>>>>> 723825274cd1372adc21454a4b9171c0f4066066
+    pause(2)
         disp('You are in a desolate hallway with smothstone walls beconing you fourth')
             if data  >1
                 pause(2)
@@ -28,14 +23,10 @@ function roomDescrip(x,map)
                 pause(2)
                 disp('Dancing in the center of this array of colors is a')
             end
-    elseif LocationData == 4
-<<<<<<< HEAD
+    elseif locationData == 4
         pause(2)
-        disp('you enter a dome shaped room with a large rune circular rune and an obsidion statue of a tisted man on the far side')
-=======
         disp('you enter a dome shaped room with a large rune circular rune and an obsidion statue of a twisted man on the far side')
->>>>>>> 723825274cd1372adc21454a4b9171c0f4066066
-            if data  >1
+            if data > 1
                 pause(2)
                 disp('the statue begins to writhe in place as the rune starts to flash and a shimmering flare blinds you for a moment and as your vison returns you see a')
             end
