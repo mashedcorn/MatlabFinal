@@ -1,7 +1,6 @@
 function [playerHp,game,map] = AdvanceRoom(coords,map,playerHp)
         %describes room and initiates battle if there is a monster in the
         %room
-        
 game = 1;
     locationData = map(coords(1,1),coords(1,2),1);
 
