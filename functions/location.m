@@ -36,5 +36,8 @@ function [coords,playerHp,game,map] = location(x,y,map,playerHp)
                 coords(1,2) = x(1,2)-1;
               [playerHp,game,map] =  AdvanceRoom(coords, map,playerHp);
             end
+        otherwise
+            game = 1;
+            disp('That is not a Direction');
     end
 
